@@ -130,3 +130,39 @@ C:\Users\adjao\OneDrive\Bureau\tp-eslint-git\utils.js
 husky - pre-commit script failed (code 1)
 
 
+On corrige les erreurs dans le fichier ensuite on refait un git add et commit :
+adjao@Anis MINGW64 ~/OneDrive/Bureau/tp-eslint-git (feature/ajout-fonctionl)
+$ git commit -m "Correction des erreurs ESLint"
+[feature/ajout-fonctionl dcdcc8d] Correction des erreurs ESLint
+ 2 files changed, 24 insertions(+), 11 deletions(-)
+
+ca passe bien donc c'est bon, on crée une pull request:
+git push --set-upstream origin feature/ajout-fonctionl
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.37 KiB | 702.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature/ajout-fonctionl' on GitHub by visiting:
+remote:      https://github.com/Anis-adjaoud/tp-eslint-git/pull/new/feature/ajout-fonctionl
+remote:
+To https://github.com/Anis-adjaoud/tp-eslint-git.git
+ * [new branch]      feature/ajout-fonctionl -> feature/ajout-fonctionl
+branch 'feature/ajout-fonctionl' set up to track 'origin/feature/ajout-fonctionl'.
+
+
+On vérifie sur GitHub Actions :
+Triggered via push 1 minute ago
+@Anis-adjaoudAnis-adjaoud
+pushed dcdcc8d feature/ajout-fonctionl
+Status Success
+Total duration 11s
+Artifacts –
+
+On remarque que ça a très bien fonctionné.
+
+On refait un dernier push afin de soumettre le readme à jour.
+
