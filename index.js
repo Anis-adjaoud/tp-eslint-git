@@ -21,7 +21,7 @@ if (nombre == 10) {
 
 setTimeout(() => {
   console.log('Timeout')
-}
+})
 
 module.exports = {
   additionner: additionner,
