@@ -105,5 +105,16 @@ jobs:
       - run: npm run lint
 
 On relance le git add commit push, et regarde a nouveau sur Actions de gitHub :
+On retouve :
+Triggered via push now
+@Anis-adjaoudAnis-adjaoud
+pushed 7c62691 main
+Status Success
+Total duration 11s
+Artifacts –
+
+Donc ça a bien passé l'exécution
+
+6. Simulation d’un travail d’équipe
 
 
