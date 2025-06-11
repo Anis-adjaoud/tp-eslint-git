@@ -26,3 +26,4 @@ setTimeout(() => {
 module.exports = {
   additionner: additionner,
   division
+}
