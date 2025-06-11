@@ -68,14 +68,42 @@ touch .github/workflows/lint.yml
 et on met le contenu du fichier, ensuite on fait un git add commit push pour vérifier l'execution sur github
 git add .
 git commit -m "Ajout de GitHub Actions"
-On obtient l'erreur suivante :
-$ git commit -m "Ajout de GitHub Actions"
+git push
 
-> tp-eslint-git@1.0.0 test
-> echo "Error: no test specified" && exit 1
+On va sur gitHub->Actions afin de voir ce qui s'est passé, et on remarque une failure avec :
+Annotations
+1 error
+Invalid workflow file: .github/workflows/lint.yml#L2
+You have an error in your yaml syntax on line 2
 
-"Error: no test specified"
-husky - pre-commit script failed (code 1)
+Le contenu actuel de lint.yml est :
+name: Lint Code
+on: [push, pull_request]
+  jobs:
+    lint:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - run: npm ci
+        - run: npm run lint
 
+on remarque qu'on a une erreur d'indentation, on corrige le fichier :
+name: Lint Code
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run lint
+
+On relance le git add commit push, et regarde a nouveau sur Actions de gitHub :
 
 
