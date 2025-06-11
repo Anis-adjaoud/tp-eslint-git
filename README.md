@@ -116,5 +116,17 @@ Artifacts –
 Donc ça a bien passé l'exécution
 
 6. Simulation d’un travail d’équipe
+$ git checkout -b feature/ajout-fonctionl
+Switched to a new branch 'feature/ajout-fonctionl'
+
+Ensuite on crée un fichier utils.js avec une erreur et on fait un git add et commit on voit bien que c'est bloqué par le hook :
+$ git commit -m "Code non conforme"
+
+C:\Users\adjao\OneDrive\Bureau\tp-eslint-git\utils.js
+  17:1  error  Parsing error: 'import' and 'export' may only appear at the top level
+
+✖ 1 problem (1 error, 0 warnings)
+
+husky - pre-commit script failed (code 1)
 
 
